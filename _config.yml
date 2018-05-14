@@ -6,8 +6,10 @@ safe: false
 # Build Settings
 markdown: kramdown
 permalink: pretty
-exclude: ['/automation/', 'README.md', 'LICENSE.txt', 'CNAME', 'Original Assets']
+exclude: ['/automation/', 'README.md', 'LICENSE.txt', 'CNAME', 'Original Assets', '/vendor']
 
+# Miscellaneous
+googleMapsAPIKey: "AIzaSyAvGdd7lRTgZrGDwURX87xxBuina1LL43k"
 
 # Site Settings
 title: "SwiftFest 2018"
@@ -20,11 +22,11 @@ googleAnalyticsSiteUrl: "swiftfest.io"
 siteVerification: "-oXISG9WQeAZnsrs10KXZHl3DzLr_t9IOnmAmDTbMrI"
 
 # Organizer Info
-organizerName: "Giorgio Natili"
-organizerAlternateName: "Google Developer Group Lviv" # TODO
-organizerDescription: "Open and volunteer geek communities who create exciting projects and share experience about Google technology with passion." # TODO
+organizerName: "Giorgio Natili, Matt Dias, Lucy Monahan, Barbara Menicucci, Jeff O'Leary, Zev Eisenberg, Sean Olszewski, Andres Pineda"
+organizerAlternateName: "SwiftFest Boston 2018"
+organizerDescription: "Open and volunteer geek community who create exciting events and share experience about mobile development technology with passion. We do love Swift and everything mobile!"
 organizerEmail: "conference@swiftfest.io"
-organizerLogo: "/img/seo/organizer-logo.png" # TODO
+organizerLogo: "/img/seo/organizer-logo.png"
 organizerLink: "http://swiftfest.io"
 
 # Head
@@ -40,31 +42,32 @@ c4sponsorsUrl: "mailto:conference@swiftfest.io"
 
 # Navigation
 navigationLinks:
- - {permalink: "/", text: "Home"}
-# - {permalink: "/schedule/", text: "Schedule"}
+# - {permalink: "/", text: "Home"}
+ - {permalink: "/schedule/", text: "Schedule"}
  - {permalink: "/speakers/", text: "Speakers"}
+ - {permalink: "/#tickets", text: "Tickets"}
+ - {permalink: "/#partners", text: "Sponsors"}
  - {permalink: "/team/", text: "Team"}
- - {permalink: "/logistics/", text: "Logistics"}
+ - {permalink: "/faq/", text: "FAQ"}
 bottomNavigationLinks:
- - {link: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSffougjfUt4bjecHeKWMgvhbiUBryAN-sU9irHQ-Ytdyih0Og/viewform", text: "Become a speaker"}
+ - {link: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets", text: "Buy tickets"}
 rightNavigationButtons:
- - {link: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSffougjfUt4bjecHeKWMgvhbiUBryAN-sU9irHQ-Ytdyih0Og/viewform", text: "Become a speaker"}
+ - {link: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets", text: "Buy tickets"}
 
 # Hero Block
-heroImage: "hero.jpg"
-heroTitle: "SwiftFest <typeout> 2018" # TODO: typeout?
+heroImage: "bricks.jpg"
+heroTitle: "SwiftFest <typeout>  2018" # TODO: typeout?
 eventDate: "June 18–19, 2018"
-typeoutTextValues: '"", "Boston", "Community", "Beantown"'
+typeoutTextValues: '"", "Boston", "Swift", "Engineering", "Community", "Beantown", "iOS", "Excellence"'
 typeoutFallback: "Boston"
 heroButtons:
- - {link: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSffougjfUt4bjecHeKWMgvhbiUBryAN-sU9irHQ-Ytdyih0Og/viewform", text: "Become a speaker"}
- - {permalink: "/#tickets", text: "Buy tickets"}
+ - {permalink: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets", text: "Buy tickets", target: "_blank"}
 
 # About Block
 aboutTitle: "About SwiftFest"
 aboutBlock:
- - {title: "Conference", image: "conference.jpg", text: "<p><strong>SwiftFest</strong> is a different way to experience <strong>iOS development</strong> that brings together engineers, architects, midnight coders, students, etc. in a highly social and vibrant environment entirely focused on <strong>Swift</strong>. The most community-driven Swift conference is happening for the first time in <strong>Boston</strong> – <strong>June 18–19</strong>, 2018.</p>" }
- - {title: "Workshops", image: "workshop.jpg", text: "At <b>SwiftFest</b> we'll be offering workshops along with talks and networking with some of the most innovative developers in the <b>Swift</b> space. Come along and elevate your <b>Swift</b> and <b>iOS</b> skills!" }
+ - {title: "Conference", image: "conference.png", text: "<p><strong>SwiftFest</strong> is a different way to experience <strong>iOS development</strong> that brings together engineers, architects, midnight coders, students, etc. in a highly social and vibrant environment entirely focused on <strong>Swift</strong>. The most community-driven Swift conference is happening for the first time in <strong>Boston</strong> – <strong>June 18–19</strong>, 2018.</p>" }
+ - {title: "Workshops", image: "workshop.png", text: "At <b>SwiftFest</b> we'll be offering workshops along with talks and networking with some of the most innovative developers in the <b>Swift</b> space. Come along and elevate your <b>Swift</b> and <b>iOS</b> skills!" }
 
 # Statistic Block
 statisticBlockImage: "statistic.jpg"
@@ -89,9 +92,9 @@ eventAddressLocality: "Boston"
 eventAddressLocalityRegion: "MA"
 eventPostalCode: "02116"
 eventAddressCountry: "USA"
-eventStartTime: "2018-6-18T10:00"
+eventStartTime: "9:00 am"
 eventDoorTime: "09:00"
-eventEndTime: "2018-6-19T20:00"
+eventEndTime: "6:00 pm"
 eventPlaceCoordinates: "42.344797, -71.070950"
 mapCenterCoordinates: "42.344848, -71.072060"
 mapMobileCenterCoordinates: "42.344848, -71.072060"
@@ -116,6 +119,9 @@ twitterFeed: "http://lviv.gdg.org.ua/tweetledee/favoritesjson.php?c=10&cache_int
 partnersTitle: "Sponsors"
 partnersC4sponsorsButton: "Become a sponsor"
 
+# Supporters Block
+supportersTitle: "Supporters"
+
 # Subscribe Block
 subscribeImage: "subscribe.jpg"
 subscribeTitle: "Subscribe for updates"
@@ -133,9 +139,31 @@ ticketsOffers:
   price: "299"
   priceCurrency: "USD"
   buyButtonLink: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets"
-  buyButtonText: "Buy Now"
+  buyButtonText: "Sold Out!"
   validFrom: "2018-1-1T00:00"
-  validThrough: "2018-04-30T23:59"
+  validThrough: "2018-04-20T23:59"
+  soldOut: false
+  disabled: false
+ -
+  name: "Early Bird"
+  price: "399"
+  priceCurrency: "USD"
+  buyButtonLink: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets"
+  buyButtonText: "Sales Ended!"
+  additionalInfo: "Conference ticket purchase includes 2 full days of sessions (June 18th - 19th) and exhibitor booths, a ticket to the official conference party on June 18th, morning snack, lunch and afternoon snack on both days."
+  validFrom: "2018-04-21T00:00"
+  validThrough: "2018-05-11T23:59"
+  soldOut: false
+  disabled: false
+ -
+  name: "Regular Bird"
+  price: "499"
+  priceCurrency: "USD"
+  buyButtonLink: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets"
+  buyButtonText: "Buy Now"
+  additionalInfo: "Conference ticket purchase includes 2 full days of sessions (June 18th - 19th) and exhibitor booths, a ticket to the official conference party on June 18th, morning snack, lunch and afternoon snack on both days."
+  validFrom: "2018-04-11T00:00"
+  validThrough: "2018-06-01T23:59"
   soldOut: false
   disabled: false
  -
@@ -146,19 +174,19 @@ ticketsOffers:
   buyButtonText: "Buy Now"
   additionalInfo: "Requires a valid student ID at the conference check in. Without student ID at the check in, ticket will be cancelled without refund."
   validFrom: "2018-1-1T00:00"
-  validThrough: "2018-06-19T18:00"
+  validThrough: "2018-06-18T9:00"
   soldOut: false
   disabled: false
   soldOutText: "Sold Out"
  -
-   name: "Super Early Bird Group"
+   name: "Group Ticket"
    price: "249.75"
    priceCurrency: "USD each"
    buyButtonLink: "https://www.eventbrite.com/e/swiftfest-2018-tickets-37370599469#tickets"
    buyButtonText: "Buy Now"
    additionalInfo: "May be purchased in groups of 4."
    validFrom: "2018-1-1T00:00"
-   validThrough: "2018-04-30T23:59"
+   validThrough: "2018-05-31T23:59"
    soldOut: false
    disabled: false
 
@@ -166,6 +194,7 @@ ticketsOffers:
 socialLinks:
  - {link: "https://twitter.com/intent/user?screen_name=TheSwiftFest", icon: "twitter"}
  - {link: "https://www.facebook.com/theSwiftFest", icon: "facebook"}
+ - {link: "https://www.linkedin.com/company/swiftfest/", icon: "linkedin"}
  - {permalink: "/feed.xml", icon: "rss"}
 footerBlocks:
  -
@@ -175,14 +204,17 @@ footerBlocks:
  -
   title: "FAQ"
   links:
-   - {permalink: "/conduct/", text: "Code of Conduct"}
+   - {permalink: "/code-of-conduct/", text: "Code of Conduct"}
+   - {permalink: "/diversity-inclusion/", text: "Diversity &amp; Inclusion"}
+   - {permalink: "/logistics/", text: "Logistics"}
+
 
 # Speakers List Block
 showSessions: true
 
 # Team Block
 teamBlockTitle: "About us"
-aboutUs: "SwiftFest is put on by a group of passionate community builders in Boston." # TODO: write better blurb
+aboutUs: "SwiftFest is put on by a group of community builders in Boston passionate about Swift and mobile related technologies. We love bringing together engineers, architects, midnight coders, students, etc. in a highly social and vibrant environment to engage in technical discussions and to have fun."
 
 # Logistics Find Way Block
 findWayTitle: "Find your way here"
@@ -197,7 +229,7 @@ logisticsMapMobileCenterCoordinates: "42.412080, -71.733608"
 logisticsMapAutoDirections: false
 
 # Logistics Direction Details Block
-directionDetailsImage: "direction-details.jpg"
+directionDetailsImage: "ship.jpg"
 directionDetailsTitle: "Get around Boston"
 directionDetailsCards:
  - {title: "From the Airport", information: 'Logan Airport is right next to the city. It is easily reachable by car, public transport, or taxi. More information is available at the <a href="http://www.massport.com/logan-airport/">airport website</a>.'}
@@ -210,6 +242,7 @@ directionDetailsWideCards:
    -
     title: "Hotels"
     links:
+     - {link: "https://www.reverehotel.com/", text: "The Revere Hotel (Official SwiftFest Hotel)"}
      - {link: "https://clubquartershotels.com/locations/club-quarters-hotel-boston", text: "Club Quarters Boston"}
      - {link: "http://www.sheratonbostonhotel.com", text: "Sheraton Boston Hotel"}
      - {link: "http://www.wboston.com/", text: "W Boston"}
